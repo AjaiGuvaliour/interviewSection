@@ -1,0 +1,27 @@
+<div class="editUserform">
+  <h2>Edit User</h2>
+<form class="userForm" #userlogin = "ngForm"  (ngSubmit) = "onClickSubmit(userlogin.value)"> 
+  <label class="formLabel" for="name">Name :</label>
+  <input class="userField" type = "text" name = "name" placeholder = "Name" [ngModel] = 'persons.name'> 
+  <br/> 
+  <label class="formLabel" for="emailid">Email Id :</label>
+  <input class="userField" type = "text" name = "emailid" placeholder = "Email Id" [ngModel] = 'persons.emailid'> 
+  <br/> 
+  <label class="formLabel" for="mobilenumber">Mobile Number :</label>
+  <input class="userField" type = "number" name = "mobilenumber" placeholder = "Mobile Number"  [ngModel] = 'persons.mobilenumber'> 
+  <br/> 
+  <label class="formLabel" for="team">Team :</label>
+  <select class="userField" name = "team" (change)="firstDropDownChanged($event.target.selectedIndex - 1)"  [ngModel] = 'persons.team'>
+    <option>--Select Team--</option>
+    <option *ngFor='let v of teams'>{{ v.val }}</option>
+  </select>
+  
+  <label class="formLabel" for="designation">Designation :</label>
+  <select class="userField" name = "designation"  [ngModel] = 'persons.designation'>
+    <option>--Select Technology--</option>
+    <option *ngFor='let v of designations'>{{ v }}</option>
+  </select>
+  <input class="submitBtn" type = "submit" value = "submit"> 
+  <button class="cancelBtn" (click)="cancelEdit()">Cancel</button>
+</form>
+</div>

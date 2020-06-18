@@ -1,0 +1,34 @@
+<div class="adduserform">
+  <h2>Add User</h2>
+    <form class="userForm" #userlogin = "ngForm"  (ngSubmit) = "onClickSubmit(userlogin.value)"> 
+      <label class="formLabel" for="name">Name :</label>
+      <br/> 
+      <input class="userField" type = "text" name = "name" placeholder = "Name" ngModel> 
+      <br/> 
+      <label class="formLabel" for="emailid">Email Id :</label>
+      <br/> 
+      <input class="userField" type = "text" name = "emailid" placeholder = "Email Id" ngModel> 
+      <br/> 
+      <label class="formLabel" for="mobilenumber">Mobile Number :</label>
+      <br/> 
+      <input class="userField" type = "number" name = "mobilenumber" placeholder = "Mobile Number" ngModel> 
+      <br/> 
+      <label class="formLabel" for="team">Team :</label>
+      <br/> 
+      <select class="userField" name = "team" (change)="firstDropDownChanged($event.target.selectedIndex - 1)" ngModel>
+        <option>--Select Team--</option>
+        <option *ngFor='let v of teams'>{{ v.val }}</option>
+      </select>
+      <br/> 
+
+      <label class="formLabel" for="designation">Designation :</label>
+      <br/> 
+      <select class="userField" name = "designation" ngModel>
+        <option>--Select Designation--</option>
+        <option *ngFor='let v of designations'>{{ v }}</option>
+      </select>
+      <br/> 
+      <input class="submitBtn" type = "submit" value = "submit"> 
+    </form>
+  
+</div>
