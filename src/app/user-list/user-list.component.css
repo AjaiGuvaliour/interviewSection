@@ -1,0 +1,47 @@
+.userList{
+    background-color: #3f51b533;
+    width: 100vw;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 12px 0px;
+    height: 100%;
+
+}
+.userListTable{
+   margin: 0 auto;
+}
+.btnDiv{
+    display: flex;
+}
+.userField{
+    width: 100%;
+    margin: 8px 0px;
+    height: 30px;
+}
+.AddUserBtn{
+    padding: 10px 20px;
+    background-color: #3f51b5;
+}
+.EditUserBtn{
+    padding: 5px;
+    background-color: green;
+    width: 80px;
+    margin-right: 5px;
+}
+.DeleteUserBtn{
+    padding: 5px;
+    background-color: red;
+    width: 80px;
+    margin-left: 5px;
+}
+.AddUserBtn , .EditUserBtn , .DeleteUserBtn{
+   
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}

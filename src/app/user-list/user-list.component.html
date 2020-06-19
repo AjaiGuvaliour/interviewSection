@@ -1,0 +1,37 @@
+<div class="userList">
+  <h2>User List</h2>
+  <table class="userListTable" border="2" bordercolor="black" width="300" cellspacing="0" cellpadding="6">
+    <thead>
+      <tr>
+        <td>S.No</td>
+        <td>Name</td>
+        <td>Email Id</td>
+        <td>Mobile Number</td>
+        <td>Team</td>
+        <td>Designation</td>
+        <td>Action</td>
+  
+      </tr>
+    </thead>
+   <tbody>
+    <tr *ngFor="let user of userList">
+      <td  *ngIf="user.id" >{{user.id}}</td>
+      <td  *ngIf="user.name" >{{user.name}}</td>
+      <td  *ngIf="user.emailid">{{user.emailid}}</td>
+      <td  *ngIf="user.mobilenumber" >{{user.mobilenumber}}</td>
+      <td  *ngIf="user.team" >{{user.team}}</td>
+      <td  *ngIf="user.designation" >{{user.designation}}</td>
+      <td >
+        <div class="btnDiv">
+          <button class="EditUserBtn" (click) = "EditUser(user.id)">Edit</button>
+          <button class="DeleteUserBtn" (click) = "DeleteUser(user.id)">Delete</button>
+        </div>
+       
+       </td>
+  
+  </tr>
+   </tbody>
+    
+  </table>
+  <button class="AddUserBtn" (click) = "addUser()">Add User</button>
+</div>

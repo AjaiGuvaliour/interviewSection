@@ -1,0 +1,43 @@
+.editUserform{
+    background-color: #3f51b533;
+    height: 100vh;
+    width: 100vw;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.userForm{
+    width: 25%;
+    display: block;
+    margin: 0px auto;
+    text-align: left;
+    padding: 20px;
+}
+.formLabel{
+
+}
+.userField{
+    width: 100%;
+    margin: 8px 0px;
+    height: 30px;
+}
+.submitBtn{
+    background-color: #3f51b5;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    margin-right: 5px;
+}
+.cancelBtn{
+    background-color: gray;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    margin-left: 5px;
+}
